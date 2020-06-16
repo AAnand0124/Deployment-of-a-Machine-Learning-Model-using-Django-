@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+<!-- <h1>Welcome to salary predictor!</h1> -->
+<!-- <h3>Enter your age of experience in the industry here</h3> -->
+<h1>Welcome to JEE Rank Predictor!</h1>
+<h2>Enter Your Rank Here!</h2>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-primary" name="button">Predict</button>
+  </form>
+  <!-- <h3><small>Expected Salary:  {{ predictions }} USD</small></h3> -->
+  <h3>2017: {{ pred1 }}</h3>
+  <h3>2018: {{ pred2 }}</h3>
+  <h3>2019: {{ pred3 }}</h3>
+
+{% endblock %}
